@@ -8,6 +8,12 @@
 # Quando saco 10 reais
 # Então meu saldo será de 90 reais
 
+# Cenário: Sem saldo
+# Dado que eu tenho uma conta corrente com 0 reais
+# Quando saco 10 reais
+# Então devo ver a mensagem "Saldo insuficiente"
+# E eu saldo final continua 0 reais
+
 # Email
 # instrutor@ninjahouse.com.br
 # Assunto: Aula 1 - Caixa
@@ -30,3 +36,9 @@ end
 
 teste = Caixa.new('Teste', 100)
 teste.saque(10)
+
+if teste.saldo == 90
+    puts "Ok"
+else
+    puts "Não ok"
+end
